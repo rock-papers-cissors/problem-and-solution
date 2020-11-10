@@ -24,3 +24,7 @@ socks5  127.0.0.1 1080
 
 sudo apt-get install vlc/shadowsocks/texmaker/
 
+##### 3 linux無法開機
+###### 3.1 遇到的問題是“started network ...., before ppp shutdown”
+解決辦法：進入recovery mode，選擇enable network，選擇dpkg repair broken packages，進入root命令行，運行apt update，再運行apt dist-upgrade，reboot。如果還是不行，再進入recovery mode，然後 root命令行，運行 `sudo apt-get remove --purge nvidia-*` `systemctl restart gdm`
+
